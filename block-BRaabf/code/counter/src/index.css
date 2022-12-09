@@ -1,0 +1,16 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+.steps {
+    margin: 2rem 0 ;
+}
+
+button{
+    padding: 2rem;
+}
+.active {
+    background-color: aqua;
+}
+
