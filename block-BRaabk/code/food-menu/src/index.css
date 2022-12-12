@@ -1,0 +1,39 @@
+.active {
+    background-color: tomato;
+
+}
+
+.container {
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+button {
+    border: none;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    width: 4.5rem;
+    height: 2rem;
+}
+
+
+button:hover {
+    border: 1px solid gray;
+    
+}
+h2 {
+    text-transform: capitalize;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    
+}
+.box {
+    border: 1px dotted grey;
+}
