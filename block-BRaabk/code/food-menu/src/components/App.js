@@ -1,50 +1,78 @@
 import data from "../data.json"
 import React from "react"
-var category = data.map(item => item.category )
+import "../index.css"
+
 
 class App extends React.Component{
     constructor(props){
     super();
     this.state = {
-        allFood:[],
-        status:false,
-        data:null,
+       active: ''
     }
 }
-
- filterFood=(data)=>{
-    const filterData= category.filter(item => item.category === data)
-    console.log(filterData)
+handleAll = () =>{
     this.setState({
-        data: filterData
+        active: ''
     })
 }
 
+handleClick = (item) => {
+    this.setState({
+    active: item,
+    });
+};
+
 render(){
+    let unique = [...new Set(data.map((cv) => cv.category))];
     return(
-        <>
-        <div>
-            <button onClick={() => this.filterFood(data)}>All</button>
-            <button onClick={() => this.filterFood("breakfast")}>Breakfast</button>
-            <button onClick={() => this.filterFood('lunch')}>Lunch</button>
-            <button onClick={() => this.filterFood('shakes')}>Shakes</button>
+        <div className="container">
+        <header>
+            <h1>Our Menu</h1>
+        </header>
+        <div className="child-container">
+         
+            <button className={this.state.active === ''? 'active': ''} onClick={this.handleAll} >All</button>
+
+            {unique.map(item =>{
+                return (
+                <button className={this.state.active === item ? 'active': ''} onClick={()=>{this.handleClick(item)}}>{item}</button>
+                )
+            })}
         </div>
-        <div>
+        <div className="grid">
         {
             data.map((ele) => {
                 const {img,title,desc,price}=ele;
-                return (
-                    <div>
-                        <img src={img}/>
-                        <h2>{title}</h2>
-                        <p>{desc}</p>
-                        <p>{price}</p>
-                    </div>
-                )
+                if(this.state.active === ele.category){
+                    return (
+                        <div className="box" >
+                            <img src={img}/>
+                            <div className="flex">
+                            <h2>{title}</h2>
+                            <p>{price}</p>
+                            </div>
+                            <p>{desc}</p>
+                            
+                        </div>
+                    )
+                } else if (!this.state.active ){
+                    return (
+                        <div className="box" >
+                            <img src={img}/>
+                            <div className="flex">
+                            <h2>{title}</h2>
+                            <p>{price}</p>
+                            </div>
+                            <p>{desc}</p>
+                            
+                        </div>
+                    )
+                }
+            
             })
         }
         </div>
-        </>
+        </div>
     )
 }
 }
