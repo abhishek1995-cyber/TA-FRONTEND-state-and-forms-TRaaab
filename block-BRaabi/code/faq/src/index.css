@@ -1,0 +1,21 @@
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: green;
+}
+button {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    width: 15rem  ;
+}
+
+.container {
+   display: flex;
+   text-align: center;
+   align-items: center;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    font-size: 2rem;
+}
