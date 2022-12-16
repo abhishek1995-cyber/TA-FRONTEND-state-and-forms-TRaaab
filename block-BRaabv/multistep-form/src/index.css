@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* my css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  background-color: aquamarine;
+  border: none;
+  padding: 1.3rem 2.5rem;
+  font-size: 1.2rem;
+}
+
+.button {
+  border: none;
+  padding: 1.3rem 2.5rem;
+  background-color: white;
+  font-size: 1rem;
+}
+
+/* first web */
+
+h2 {
+  text-align: center;
+}
+
+.form-first {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input-first {
+  margin: 1.2rem 0 ;
+  height: 1.3rem;
+}
+
+
+/* second web*/
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  margin: 1.5rem 0 ;
+}
+
+
+
+/* third */
+
+#btn-third {
+  padding: 1.5rem 2rem;
+ margin-right: 15rem;
+}
+
+.btn-footer {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+ margin-left: 2rem;
+ 
+}
+
+.btn-footer:hover {
+  background-color: blanchedalmond;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
